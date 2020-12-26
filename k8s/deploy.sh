@@ -6,12 +6,12 @@ docker push danielofir/multi-client:latest
 docker push danielofir/multi-server:latest
 docker push danielofir/multi-worker:latest
 
-docker push danielofir/multi-server:$SHA
 docker push danielofir/multi-client:$SHA
+docker push danielofir/multi-server:$SHA
 docker push danielofir/multi-worker:$SHA
 
 kubectl apply -f k8s
-kubectl set image deployments/server-deployment server=danielofir/multi-server:$SHA
 kubectl set image deployments/client-deployment client=danielofir/multi-client:$SHA
+kubectl set image deployments/server-deployment server=danielofir/multi-server:$SHA
 kubectl set image deployments/worker-deployment worker=danielofir/multi-worker:$SHA
 
