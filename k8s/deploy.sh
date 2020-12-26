@@ -10,8 +10,8 @@ docker push danielofir/complex-client:$SHA
 docker push danielofir/complex-server:$SHA
 docker push danielofir/complex-worker:$SHA
 
-kubectl apply -f k8s
-kubectl set image deployments/client-deployment client=danielofir/complex-client:$SHA
-kubectl set image deployments/server-deployment server=danielofir/complex-server:$SHA
-kubectl set image deployments/worker-deployment worker=danielofir/complex-worker:$SHA
+# kubectl apply -f k8s
+# kubectl set image deployments/client-deployment client=danielofir/complex-client:$SHA
+# kubectl set image deployments/server-deployment server=danielofir/complex-server:$SHA
+# kubectl set image deployments/worker-deployment worker=danielofir/complex-worker:$SHA
 
